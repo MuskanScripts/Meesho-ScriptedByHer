@@ -1,0 +1,30 @@
+# Node.js
+node_modules/
+.env
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# VSCode / JetBrains
+.vscode/
+.idea/
+
+# Build
+dist/
+build/
+
+# React Native / Expo (if used)
+.expo/
+.expo-shared/
+
+# Dependency lock files
+package-lock.json
+yarn.lock
+
+# Local configs
+.env.local
