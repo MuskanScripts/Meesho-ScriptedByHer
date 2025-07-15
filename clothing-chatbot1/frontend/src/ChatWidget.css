@@ -1,0 +1,216 @@
+.chat-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background: #007bff;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  cursor: pointer;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+.chat-icon:hover {
+  transform: scale(1.1);
+}
+.chat-icon img {
+  width: 32px;
+  height: 32px;
+  filter: brightness(0) invert(1);
+}
+
+.chatbot-container {
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  width: 90vw;
+  max-width: 360px;
+  height: 80vh;
+  max-height: 500px;
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+  display: flex;
+  flex-direction: column;
+  z-index: 999;
+  transition: all 0.3s ease;
+}
+@media (min-width: 768px) {
+  .chatbot-container {
+    width: 360px;
+    height: 500px;
+  }
+}
+
+.chatbot-header {
+  background: linear-gradient(to right, #007bff, #00bfff);
+  padding: 12px 16px;
+  color: #fff;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.1em;
+}
+.chatbot-header button {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+.chat-box {
+  flex: 1;
+  padding: 12px;
+  overflow-y: auto;
+  background: #f8f9fa;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-bubble {
+  margin: 8px 0;
+  padding: 10px 14px;
+  border-radius: 18px;
+  max-width: 75%;
+  line-height: 1.4;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+.chat-bubble.user {
+  background: #007bff;
+  color: white;
+  align-self: flex-end;
+}
+.chat-bubble.bot {
+  background: #e9ecef;
+  color: #333;
+  align-self: flex-start;
+}
+
+.input-area {
+  display: flex;
+  padding: 12px;
+  border-top: 1px solid #dee2e6;
+  background: #fff;
+}
+.input-area input {
+  flex: 1;
+  border: 1px solid #ced4da;
+  border-radius: 20px;
+  padding: 10px 14px;
+  outline: none;
+  font-size: 0.95em;
+}
+.input-area button {
+  background: #007bff;
+  border: none;
+  color: white;
+  margin-left: 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s;
+}
+.input-area button:hover {
+  background: #0056b3;
+}
+
+.product-card {
+  background: white;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 6px 0;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+}
+.product-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+.product-card.selected {
+  border-color: #9333ea;
+  background: #f0e5fc;
+}
+.product-card .tick {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: #9333ea;
+  color: white;
+  font-size: 14px;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+}
+
+.action-btn {
+  margin: 6px;
+  padding: 10px;
+  background: #10b981;
+  color: white;
+  border: none;
+  width: 90%;
+  margin: 10px auto;
+  display: block;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.predefined-questions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 10px;
+  justify-content: center;
+}
+.predefined-questions div {
+  background: #eee;
+  border-radius: 16px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-size: 13px;
+  color: #333;
+  transition: background 0.2s ease;
+}
+.predefined-questions div:hover {
+  background: #ddd;
+}
+
+.bottom-nav {
+  display: flex;
+  justify-content: space-around;
+  background: #007bff;
+  padding: 8px 0;
+  font-size: 0.85em;
+  color: #fff;
+  border-top: 1px solid rgba(255,255,255,0.2);
+}
+.bottom-nav .nav-item {
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+.bottom-nav .nav-item.active {
+  background: rgba(255,255,255,0.2);
+  font-weight: bold;
+}
+.bottom-nav .nav-item:hover {
+  background: rgba(255,255,255,0.3);
+}
